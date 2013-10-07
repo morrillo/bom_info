@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	<record model="ir.ui.view" id="product_cost_view">
+	    <field name="name">product.cost.inherit</field>
+	    <field name="model">product.product</field>
+	    <field name="inherit_id" ref="product.product_normal_form_view" />
+	    <field name="arch" type="xml">
+	        <data>
+	                <page position="after" string="Sales">
+        	            <page string="BoM Info">
+				<field name="bom_ids" >
+                                	<tree string="BoM Info">
+	                                    <field name="name" />
+	                                    <field name="manufacturing_cost" />
+	                                    <field name="theoretical_manuf_delay" />
+	                                    <field name="real_manuf_delay" />
+					</tree>
+				</field>
+			   </page>
+			</page>
+	        </data> 
+	    </field>
+	</record>
+
+    </data>
+</openerp>
